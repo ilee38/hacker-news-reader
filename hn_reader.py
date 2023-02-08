@@ -1,14 +1,27 @@
 #!usr/bin/env python3
 
+import argparse
 import json
 import requests
 import time
-from collections import namedtuple
 from datetime import timedelta
 
 
 # URI prefix for the Hacker News v0 API
 API_ENDPOINT_PREFIX = "https://hacker-news.firebaseio.com/v0"
+
+parser = argparse.ArgumentParser(
+   prog="hn_reader",
+   description="Fetch the latest top stories from Hacker News"
+)
+
+parser.add_argument(
+   "-q",
+   "--quantity",
+   default=10,
+   help="The number of stories to display (max is 500). If not provided, the default is 10."
+)
+
 
 def print_header():
    local_time = time.localtime()
@@ -21,12 +34,13 @@ def print_header():
 
 def get_elapsed_time(story_timestamp):
    """
-      Returns the elapsed time from a given timestamp to the current time.
+      Returns the elapsed time in hours or minutes from a given timestamp to the
+      current time.
    """
    time_value = None
    time_units = None
 
-   current_time = timedelta(seconds=time.time(),)
+   current_time = timedelta(seconds=time.time())
    story_time = timedelta(seconds=story_timestamp)
    time_delta = current_time - story_time
 
@@ -53,13 +67,13 @@ def get_story_properties(story_id):
    return json_response
 
 
-def print_stories(stories_ids):
+def print_stories(stories_ids, quantity):
    """
       Prints the stories details to std output.
    """
    print_header()
 
-   for i in range(10):
+   for i in range(quantity):
       story = get_story_properties(stories_ids[i])
 
       title = story["title"]
@@ -86,8 +100,9 @@ def get_top_stories():
 
 
 def main():
+   args = parser.parse_args()
    top_stories = get_top_stories()
-   print_stories(top_stories)
+   print_stories(top_stories, int(args.quantity))
 
 
 if __name__ == "__main__":
