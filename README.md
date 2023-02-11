@@ -40,7 +40,7 @@ Fetch Hacker News top stories in the terminal
 
 ### Usage
 
-```bash
+```
 $ python3 hnreader.py -h
 usage: hnreader [-h] [-q]
 
@@ -53,8 +53,8 @@ optional arguments:
 
 ### Fetching stories
 
-```bash
-$ python3 hnreader.py -q 15
+```
+$ python3 hnreader.py -q 5
 
 ******************************************************************
                   Hacker News - Top Stories
@@ -62,7 +62,7 @@ $ python3 hnreader.py -q 15
                   Fri Feb 10 10:47:44 2023
 
 ******************************************************************
-[fetching the latest top 15 stories...]
+[fetching the latest top 5 stories...]
 
 [1]. “Open Source” Seeds Loosen Big Ag’s Grip on Farmers
 https://worldsensorium.com/open-source-seeds-loosen-big-ags-grip-on-farmers/
