@@ -1,6 +1,6 @@
 # Hacker News Reader
 
-Fetch Hacker News top stories in the terminal
+Fetch your Hacker News top stories in the terminal
 
 ## Pre-requisites
 
@@ -12,7 +12,11 @@ Fetch Hacker News top stories in the terminal
    $ firebase login
  ```
 
-- Verify you have Python version 3 installed.
+- Verify you have Python 3 installed:
+
+```bash
+   $ python --version
+```
 
 ## Running the program
 
@@ -21,20 +25,24 @@ Fetch Hacker News top stories in the terminal
 3. Execute the program:
 
 ```bash
-   python3 hnreader.py
+   $ python3 hnreader.py
 ```
 - This will fetch the latest top 10 stories.
 
 4. You can specify the number of stories to fetch with the `-q` or `--quantity` flag:
 
 ```bash
-   python3 hnreader.py -q 25
+   $ python3 hnreader.py -q 25
 ```
 - This will fetch the latest top 25 stories
 
-5. Ctr+click on the link in the story to open it in a browser.
+5. Depending on your terminal: Ctr+click, Cmd+click, or just click on the link in the story to open it in a browser.
+   -  If using zsh on macOS, you can preview the story without opening a browser:
+      -  Ctrl+click on the url, then select Quick Look:
+![zsh](./img/hnreader-on-zsh.png)
 
-**Note**: The max number of stories is 500 per the Hacker News Api limit.
+
+*Note*: The max number of stories is 500 per the Hacker News Api limit.
 
 ## Screen views
 
