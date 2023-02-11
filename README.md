@@ -1,21 +1,28 @@
 # Hacker News Reader
 
-Fetch your Hacker News top stories in the terminal
+Fetch Hacker News top stories right from your terminal.
 
 ## Pre-requisites
 
-- Install the Firebase CLI for your OS (Windows, macOS, or Linux)
-  - Follow the installation instructions here: [Firebase CLI reference](https://firebase.google.com/docs/cli#install-cli-mac-linux)
-  - Make sure to login to Firebase with the command below (you can use your Google credentials to login).
+1. Install the Firebase CLI for your OS (Windows, macOS, or Linux)
+     - Follow the installation instructions here: [Firebase CLI reference](https://firebase.google.com/docs/cli#install-cli-mac-linux)
+     - Make sure to login to Firebase with the command below (you can use your Google credentials to login).
 
  ```bash
    $ firebase login
  ```
 
-- Verify you have Python 3 installed:
+2. Verify you have Python 3 installed:
 
 ```bash
    $ python --version
+```
+   - If not installed, download Python [here](https://www.python.org/downloads/)
+
+3. Install Python's `request` library:
+
+```bash
+   $ pip install requests
 ```
 
 ## Running the program
@@ -27,14 +34,14 @@ Fetch your Hacker News top stories in the terminal
 ```bash
    $ python3 hnreader.py
 ```
-- This will fetch the latest top 10 stories.
+This will fetch the latest top 10 stories.
 
 4. You can specify the number of stories to fetch with the `-q` or `--quantity` flag:
 
 ```bash
    $ python3 hnreader.py -q 25
 ```
-- This will fetch the latest top 25 stories
+This will fetch the latest top 25 stories
 
 5. Depending on your terminal: Ctr+click, Cmd+click, or just click on the link in the story to open it in a browser.
    -  If using zsh on macOS, you can preview the story without opening a browser:
@@ -42,7 +49,13 @@ Fetch your Hacker News top stories in the terminal
 ![zsh](./img/hnreader-on-zsh.png)
 
 
-*Note*: The max number of stories is 500 per the Hacker News Api limit.
+*Note*: The max number of stories is 500 per the Hacker News API limit.
+
+6. Alternatively, you can run the file directly:
+
+```bash
+   $ ./hnreader.py
+```
 
 ## Screen views
 
