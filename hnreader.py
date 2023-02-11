@@ -6,7 +6,6 @@ import time
 from datetime import timedelta
 from cli import parser
 
-
 # URI prefix for the Hacker News v0 API
 API_ENDPOINT_PREFIX = "https://hacker-news.firebaseio.com/v0"
 
@@ -23,8 +22,7 @@ def print_header(num_of_stories):
 
 
 def get_elapsed_time(story_timestamp):
-   """
-      Returns the elapsed time in hours or minutes from a given timestamp to the
+   """Returns the elapsed time in hours or minutes from a given timestamp to the
       current time.
    """
    time_value = None
@@ -45,8 +43,7 @@ def get_elapsed_time(story_timestamp):
 
 
 def get_story_properties(story_id):
-   """
-      Returns the properties of a story. If the story is an "Ask HN", it will not
+   """Returns the properties of a story. If the story is an "Ask HN", it will not
       contain a url property.
    """
    story_endpoint = f"{API_ENDPOINT_PREFIX}/item/{story_id}.json?print=pretty"
@@ -58,8 +55,7 @@ def get_story_properties(story_id):
 
 
 def print_stories(stories_ids, quantity):
-   """
-      Prints the stories details to std output.
+   """Prints the stories details to std output.
    """
    num_of_stories = quantity
 
@@ -83,8 +79,7 @@ def print_stories(stories_ids, quantity):
 
 
 def get_top_stories():
-   """
-      Returns the IDs of up to 500 top stories.
+   """Returns the IDs of up to 500 top stories.
    """
    top_stories_endpoint = f"{API_ENDPOINT_PREFIX}/topstories.json?print=pretty"
 
