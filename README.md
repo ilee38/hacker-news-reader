@@ -19,7 +19,7 @@ Fetch Hacker News top stories right from your terminal.
 ```
    - If not installed, download Python [here](https://www.python.org/downloads/)
 
-3. Install Python's `request` library:
+3. Install Python's `requests` library:
 
 ```bash
    $ pip install requests
