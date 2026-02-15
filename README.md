@@ -4,32 +4,44 @@ Fetch Hacker News top stories right from your terminal.
 
 ## Pre-requisites
 
-1. Install the Firebase CLI for your OS (Windows, macOS, or Linux)
-     - Follow the installation instructions here: [Firebase CLI reference](https://firebase.google.com/docs/cli#install-cli-mac-linux)
-     - Make sure to login to Firebase with the command below (you can use your Google credentials to login).
-
- ```bash
-   $ firebase login
- ```
-
-2. Verify you have Python 3 installed:
+1. Verify you have Python 3 installed:
 
 ```bash
    $ python --version
 ```
    - If not installed, download Python [here](https://www.python.org/downloads/)
 
-3. Install Python's `requests` library:
-
-```bash
-   $ pip install requests
-```
-
 ## Running the program
 
-1. Download the code from this repository.
-2. Open your terminal window and navigate to the directory where the `hnreader.py` module is located.
-3. Execute the program:
+Clone this repository to your machine. Then create a python virtual environment as follows:
+
+1. On your terminal, navigate to the repository's root directory. Then execute:
+
+   ```bash
+   python -m venv <venv_name>
+   ```
+   where <venv_name> is the name you want to give the virtual environment
+
+2. To activate the environment:
+
+      On MacOS/Linux execute:
+
+   ```bash
+   source <venv_name>/bin/activate
+   ```
+      On Windows execute:
+
+   ```bash
+   .\<venv_name>\Scripts\activate
+   ```
+
+3. With the virtual environment active, install the required libraries with pip:
+
+    ```bash
+    pip install -r ./requirements.txt
+    ```
+
+4. Execute the program:
 
 ```bash
    $ python3 hnreader.py
