@@ -1,6 +1,8 @@
-# Hacker News Reader
+# Hacker News Reader CLI
 
 Fetch Hacker News top stories right from your terminal.
+
+![zsh](./img/hnreader-on-zsh.png)
 
 ## Pre-requisites
 
@@ -57,9 +59,7 @@ This will fetch the latest top 25 stories
 
 5. Depending on your terminal: Ctr+click, Cmd+click, or just click on the link in the story to open it in a browser.
    -  If using zsh on macOS, you can preview the story without opening a browser:
-      -  Ctrl+click on the url, then select Quick Look:
-![zsh](./img/hnreader-on-zsh.png)
-
+      -  Ctrl+click on the url, then select "Quick Look"
 
 *Note*: The max number of stories is 500 per the Hacker News API limit.
 
