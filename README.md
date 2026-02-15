@@ -15,7 +15,7 @@ Fetch Hacker News top stories right from your terminal.
 
 Clone this repository to your machine. Then create a python virtual environment as follows:
 
-1. On your terminal, navigate to the repository's root directory. Then execute:
+1. On your terminal, navigate to the repository's root directory and create a venv (**recommended**):
 
    ```bash
    python -m venv <venv_name>
@@ -63,7 +63,7 @@ This will fetch the latest top 25 stories
 
 *Note*: The max number of stories is 500 per the Hacker News API limit.
 
-6. Alternatively, you can run the file directly:
+6. Alternatively, you can run the file directly from the root directory (no venv):
 
 ```bash
    $ ./hnreader.py
