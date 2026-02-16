@@ -50,20 +50,28 @@ Clone this repository to your machine. Then create a python virtual environment 
 ```
 This will fetch the latest top 10 stories.
 
-4. You can specify the number of stories to fetch with the `-q` or `--quantity` flag:
+5. You can specify the number of stories to fetch with the `-q` or `--quantity` flag:
 
 ```bash
    $ python3 hnreader.py -q 25
 ```
 This will fetch the latest top 25 stories
 
-5. Depending on your terminal: Ctr+click, Cmd+click, or just click on the link in the story to open it in a browser.
+6. Depending on your terminal: Ctr+click, Cmd+click, or just click on the link in the story to open it in a browser.
    -  If using zsh on macOS, you can preview the story without opening a browser:
       -  Ctrl+click on the url, then select "Quick Look"
 
 *Note*: The max number of stories is 500 per the Hacker News API limit.
 
-6. Alternatively, you can run the file directly from the root directory (no venv):
+7. Launch interactive TUI mode:
+
+```bash
+   $ python3 hnreader.py -t
+```
+
+Use Up/Down arrows to move between stories, then press Enter to open the selected story in your browser.
+
+8. Alternatively, you can run the file directly from the root directory (no venv):
 
 ```bash
    $ ./hnreader.py
@@ -75,13 +83,14 @@ This will fetch the latest top 25 stories
 
 ```
 $ python3 hnreader.py -h
-usage: hnreader [-h] [-q]
+usage: hnreader [-h] [-q] [-t]
 
 Fetch the latest top stories from Hacker News
 
 optional arguments:
   -h, --help        show this help message and exit
   -q , --quantity   The number of stories to display (max is 500). If not provided, the default is 10.
+  -t, --tui         Launch interactive TUI mode.
 ```
 
 ### Fetching stories

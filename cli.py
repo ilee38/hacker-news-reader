@@ -14,3 +14,11 @@ parser.add_argument(
    type=int,
    metavar=""
 )
+
+parser.add_argument(
+   "-t",
+   "--tui",
+   action="store_true",
+   help="Launch interactive TUI mode.",
+   required=False
+)
