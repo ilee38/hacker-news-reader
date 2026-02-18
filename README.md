@@ -9,7 +9,7 @@ Fetch Hacker News top stories right from your terminal.
 1. Verify you have Python 3 installed:
 
 ```bash
-   $ python --version
+   $ python3 --version
 ```
    - If not installed, download Python [here](https://www.python.org/downloads/)
 
@@ -20,7 +20,7 @@ Clone this repository to your machine. Then create a python virtual environment 
 1. On your terminal, navigate to the repository's root directory and create a venv (**recommended**):
 
    ```bash
-   python -m venv <venv_name>
+   python3 -m venv <venv_name>
    ```
    where <venv_name> is the name you want to give the virtual environment
 
@@ -40,7 +40,7 @@ Clone this repository to your machine. Then create a python virtual environment 
 3. With the virtual environment active, install the required libraries with pip:
 
     ```bash
-    pip install -r ./requirements.txt
+    pip3 install -r ./requirements.txt
     ```
 
 4. Execute the program:
@@ -74,7 +74,7 @@ Use Up/Down arrows to move between stories, then press Enter to open the selecte
 8. Alternatively, you can run the file directly from the root directory (no venv):
 
 ```bash
-   $ ./hnreader.py
+   $ python3 hnreader.py
 ```
 
 ## Screen views
