@@ -21,7 +21,7 @@ class HackerNewsTUI(App):
    #banner {
       padding: 0 1;
       border: round cyan;
-      color: cyan;
+      color: orange;
    }
 
    #story_list {
@@ -41,7 +41,9 @@ class HackerNewsTUI(App):
          yield OptionList(
             *[
                f"[{story['index']}] {story['title']} "
-               f"({story['score']} points | {story['time_value']} {story['time_unit']} ago)"
+               f"({story['score']} points | {story['time_value']} {story['time_unit']} ago)\n"
+               f"{story['url'] if story['url'] else ''}\n"
+               f"-------------------------"
                for story in self.stories
             ],
             id="story_list",

@@ -27,6 +27,7 @@ ANSI_BLUE = "\033[34m"
 ANSI_WHITE = "\033[97m"
 ANSI_YELLOW = "\033[33m"
 ANSI_GREEN = "\033[32m"
+ANSI_BRIGHT_RED = "\033[91m"
 ANSI_UNDERLINE = "\033[4m"
 USE_COLORS = sys.stdout.isatty() and os.getenv("TERM", "").lower() != "dumb"
 
@@ -41,7 +42,7 @@ def stylize(text, *styles):
 def print_header(num_of_stories):
    local_time = time.localtime()
 
-   print(stylize(ASCII_BANNER, ANSI_BOLD, ANSI_CYAN))
+   print(stylize(ASCII_BANNER, ANSI_BOLD, ANSI_BRIGHT_RED))
    print(stylize("******************************************************************", ANSI_CYAN))
    print(stylize("                  Hacker News - Top Stories", ANSI_BOLD, ANSI_WHITE))
    print(stylize(f"                  {time.asctime(local_time)}", ANSI_DIM))
@@ -148,6 +149,7 @@ def main():
    if args.tui:
       run_tui(stories)
    else:
+      os.system("clear" if os.name != "nt" else "cls")
       print_stories(stories)
 
 
